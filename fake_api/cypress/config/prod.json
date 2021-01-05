@@ -1,0 +1,9 @@
+{
+    "baseUrl": "https://fakerestapi.azurewebsites.net/api/v1",
+    "env": {
+      "global_timeout": 100000,
+      "environment": "PROD"
+    },
+    "video": false
+  }
+  

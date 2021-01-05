@@ -1,0 +1,120 @@
+{
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "id": 1,
+                "title": "Book 1",
+                "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                "pageCount": 100,
+                "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                "publishDate": "2021-01-03T14:15:15.7973327+00:00"
+            },
+            {
+                "id": 2,
+                "title": "Book 2",
+                "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                "pageCount": 200,
+                "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                "publishDate": "2021-01-02T14:15:15.7973452+00:00"
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "id": 1,
+                        "title": "Book 1",
+                        "description": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                        "pageCount": 100,
+                        "excerpt": "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n",
+                        "publishDate": "2021-01-03T14:15:15.7973327+00:00"
+                    }
+                ],
+                "required": [
+                    "id",
+                    "title",
+                    "description",
+                    "pageCount",
+                    "excerpt",
+                    "publishDate"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1
+                        ]
+                    },
+                    "title": {
+                        "$id": "#/items/anyOf/0/properties/title",
+                        "type": "string",
+                        "title": "The title schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Book 1"
+                        ]
+                    },
+                    "description": {
+                        "$id": "#/items/anyOf/0/properties/description",
+                        "type": "string",
+                        "title": "The description schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n"
+                        ]
+                    },
+                    "pageCount": {
+                        "$id": "#/items/anyOf/0/properties/pageCount",
+                        "type": "integer",
+                        "title": "The pageCount schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            100
+                        ]
+                    },
+                    "excerpt": {
+                        "$id": "#/items/anyOf/0/properties/excerpt",
+                        "type": "string",
+                        "title": "The excerpt schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n"
+                        ]
+                    },
+                    "publishDate": {
+                        "$id": "#/items/anyOf/0/properties/publishDate",
+                        "type": "string",
+                        "title": "The publishDate schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "2021-01-03T14:15:15.7973327+00:00"
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
